@@ -27,5 +27,3 @@ AppDataSource.initialize()
         console.error("Error during Data Source initialization", err)
     });
 export default AppDataSource;
-/*host: configService.get<string>('POSTGRES_HOST'),
-    database:  ,*/

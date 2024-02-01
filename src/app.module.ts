@@ -1,11 +1,15 @@
 import {Module} from '@nestjs/common';
-import { GenResponceModule } from './gen-responce/gen-responce.module';
+import {GenResponceModule} from './gen-responce/gen-responce.module';
+import {GenResponceService} from "./gen-responce/gen-responce.service";
+import {ConfigModule} from "@nestjs/config";
+import {TypeOrmModule} from '@nestjs/typeorm';
 
 @Module({
    providers: [GenResponceService],
    imports: [ConfigModule.forRoot({
       envFilePath: `.env`,
       isGlobal: true,
+   }),
       TypeOrmModule.forRoot({
          type: 'postgres',
          host: process.env.POSTGRES_HOST,
@@ -18,7 +22,8 @@ import { GenResponceModule } from './gen-responce/gen-responce.module';
          // ssl: { rejectUnauthorized: false },for  connect to render
       }),
       GenResponceModule,
-   }), GenResponceModule,],
+   ],
 })
+
 export class AppModule {
 }

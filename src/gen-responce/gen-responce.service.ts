@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import {HttpStatus, Injectable} from '@nestjs/common';
 import {GeneralResponse} from "./interface/generalResponse.interface";
 
 @Injectable()
