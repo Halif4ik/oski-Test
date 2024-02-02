@@ -12,5 +12,4 @@ export class CreateUserDto {
     @Length(2, 255,{ message:' firstName Min lenth 2 max length 255'})
     readonly firstName:string;
 
-
 }

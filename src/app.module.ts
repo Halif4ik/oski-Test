@@ -4,6 +4,7 @@ import {GenResponceService} from "./gen-responce/gen-responce.service";
 import {ConfigModule} from "@nestjs/config";
 import {TypeOrmModule} from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
    providers: [GenResponceService],
@@ -24,6 +25,7 @@ import { UserModule } from './user/user.module';
       }),
       GenResponceModule,
       UserModule,
+      AuthModule,
    ],
 })
 
