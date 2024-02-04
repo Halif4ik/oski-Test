@@ -1,4 +1,4 @@
-import {IsBoolean, IsEmail, IsOptional, IsString, Length} from "class-validator";
+import { IsEmail,  IsString, Length} from "class-validator";
 export class CreateUserDto {
     @IsEmail({},{message: 'E-mail, should be string'})
     @Length(3, 255,{ message:' mail Min lenth 3 max length 255'})

@@ -1,5 +1,6 @@
 import {User} from "../../user/entities/user.entity";
 import {Auth} from "../../auth/entities/auth.entity";
+import {Company} from "../../company/entities/company.entity";
 
 export interface IUserInfo {
    "user": User
@@ -15,4 +16,7 @@ export type TJwtBody = {
    "firstName": string,
    iat?: number,
    exp?: number
+}
+export interface ICompany {
+   "company": Company | Company[]
 }
