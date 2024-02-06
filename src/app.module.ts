@@ -7,6 +7,7 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { CompanyModule } from './company/company.module';
 import { TestModule } from './test/test.module';
+import { WorkFlowModule } from './work-flow/work-flow.module';
 
 @Module({
    providers: [GenResponceService],
@@ -30,6 +31,7 @@ import { TestModule } from './test/test.module';
       AuthModule,
       CompanyModule,
       TestModule,
+      WorkFlowModule,
    ],
 })
 

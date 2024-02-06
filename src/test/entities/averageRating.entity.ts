@@ -37,6 +37,6 @@ export class AvgRating {
 
    @ManyToMany(() => PassedTest)
    @JoinTable()
-   passedQuiz: PassedTest[];
+   passedTest: PassedTest[];
 
 }

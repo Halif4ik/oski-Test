@@ -27,7 +27,7 @@ export class PassedTest {
    @Column({type: 'boolean', default: false})
    isStarted: boolean;
 
-   @ManyToOne(() => User, user => user.passedQuiz, {onDelete: 'CASCADE',})
+   @ManyToOne(() => User, user => user.passedTest, {onDelete: 'CASCADE',})
    @JoinColumn()
    user: User;
 
