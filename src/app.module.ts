@@ -3,6 +3,11 @@ import {GenResponceModule} from './gen-responce/gen-responce.module';
 import {GenResponceService} from "./gen-responce/gen-responce.service";
 import {ConfigModule} from "@nestjs/config";
 import {TypeOrmModule} from '@nestjs/typeorm';
+import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
+import { CompanyModule } from './company/company.module';
+import { TestModule } from './test/test.module';
+import { WorkFlowModule } from './work-flow/work-flow.module';
 
 @Module({
    providers: [GenResponceService],
@@ -22,6 +27,11 @@ import {TypeOrmModule} from '@nestjs/typeorm';
          // ssl: { rejectUnauthorized: false },for  connect to render
       }),
       GenResponceModule,
+      UserModule,
+      AuthModule,
+      CompanyModule,
+      TestModule,
+      WorkFlowModule,
    ],
 })
 
